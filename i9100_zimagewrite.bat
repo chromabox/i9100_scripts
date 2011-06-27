@@ -40,6 +40,7 @@ echo "kernel write success. reboot SGS2.."
 pause
 
 @echo on
+adb shell su -c "rm /data/local/tmp/zImage"
 adb shell su -c "sync;sync;sync;sleep 2; reboot"
 @echo off
 
